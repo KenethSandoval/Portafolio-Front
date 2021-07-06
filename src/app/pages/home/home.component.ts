@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   download() {
-    window.open('../../../assets/document/Curriculum_keneth+(1).docx', 'Download');
+    window.open('../../../assets/document/cv_keneth.pdf', 'Download');
   }
 
   ngOnInit(): void {}

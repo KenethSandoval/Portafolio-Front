@@ -1,13 +1,7 @@
 <div>
-  <div class=" pt-6 px-4 sm:px-6 lg:px-8 dark:bg-gray-700">
+  <div class="pt-6 px-4 sm:px-6 lg:px-8 dark:bg-gray-700">
     <nav
-      class="
-        flex
-        items-center
-        justify-between
-        sm:h-10
-        lg:justify-start
-      "
+      class="flex items-center justify-between sm:h-10 lg:justify-start"
       aria-label="Global"
     >
       <div class="flex items-center flex-grow flex-shrink-0 lg:mb-4">
@@ -37,7 +31,7 @@
                 focus:ring-indigo-500
               "
               aria-expanded="false"
-              (click) = "menu()"
+              (click)="menu()"
             >
               <span class="sr-only">Open main menu</span>
               <!-- Heroicon name: outline/menu -->
@@ -61,15 +55,21 @@
         </div>
       </div>
       <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8 lg:mb-4">
-        <a href="#" class="font-medium text-gray-500 hover:text-gray-900 dark:text-white"
+        <a
+          href="#"
+          class="font-medium text-gray-500 hover:text-gray-900 dark:text-white"
           >Projects</a
         >
 
-        <a href="#" class="font-medium text-gray-500 hover:text-gray-900 dark:text-white"
+        <a
+          href="#about"
+          class="font-medium text-gray-500 hover:text-gray-900 dark:text-white"
           >About me</a
         >
 
-        <a href="#" class="font-medium text-gray-500 hover:text-gray-900 dark:text-white"
+        <a
+          href="#"
+          class="font-medium text-gray-500 hover:text-gray-900 dark:text-white"
           >Contact</a
         >
       </div>
@@ -88,7 +88,7 @@
         -->
   <div
     class="
-      relative
+      absolute
       top-0
       inset-x-0
       p-2
@@ -105,17 +105,12 @@
         shadow-md
         bg-white
         ring-1 ring-black ring-opacity-5
-        overflow-hidden
         dark:bg-gray-700
       "
     >
       <div class="px-5 pt-4 flex items-center justify-between">
         <div>
-          <img
-            class="h-8 w-auto"
-            src="../../../assets/img/logo.png"
-            alt=""
-          />
+          <img class="h-8 w-auto" src="../../../assets/img/logo.png" alt="" />
         </div>
         <div class="-mr-2">
           <button
@@ -174,7 +169,7 @@
         >
 
         <a
-          href="#"
+          href="#about"
           class="
             block
             px-3
@@ -203,7 +198,7 @@
             dark:text-white
           "
           >Contact</a
-        > 
+        >
       </div>
     </div>
   </div>

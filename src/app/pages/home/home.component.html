@@ -1,21 +1,13 @@
-<div class="relative bg-white overflow-hidden dark:bg-gray-800"> 
-     <div
-      class="
-        relative
-        pb-8
-        bg-white
-        dark:bg-gray-800 
-      "
-    >   
-      <app-header></app-header>
+<div class="bg-white overflow-hidden dark:bg-gray-800 lg:relative">
+  <div class="pb-8 bg-white dark:bg-gray-800 lg:relative">
+    <app-header></app-header>
   </div>
 </div>
 
-<div class="relative bg-white overflow-hidden dark:bg-gray-800">
+<div class="bg-white overflow-hidden dark:bg-gray-800 lg:relative">
   <div class="max-w-15xl mx-auto">
     <div
       class="
-        relative
         z-10
         pb-8
         bg-white
@@ -23,10 +15,10 @@
         md:pb-20
         lg:max-w-2xl lg:w-full lg:pb-28
         xl:pb-32
-        dark:bg-gray-800 
+        dark:bg-gray-800
+        lg:relative
       "
     >
-      
       <main
         class="
           mt-10
@@ -71,6 +63,7 @@
             in languages such as: Javascript, Typescript, Golang, C/C ++, Java.
             And doing good practices in development.
           </p>
+
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div class="rounded-md shadow">
               <a
@@ -128,9 +121,19 @@
 
   <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
     <img
-      class="h-50 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-auto lg:mt-18 dark:bg-gray-800"
+      class="
+        h-50
+        w-full
+        object-cover
+        sm:h-72
+        md:h-96
+        lg:w-full lg:h-auto lg:mt-18
+        dark:bg-gray-800
+      "
       src="../../../assets/img/banner-image sin fondo.png"
       alt="banner"
     />
   </div>
 </div>
+
+<app-about></app-about>

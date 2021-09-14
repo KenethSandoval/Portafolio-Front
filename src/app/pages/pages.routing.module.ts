@@ -10,6 +10,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./child-route.module').then((m) => m.ChildRouteModule),
   },
+  {
+    path: 'projects',
+    component: PagesComponent,
+    loadChildren: () =>
+      import('./child-route.module').then((m) => m.ChildRouteModule),
+  },
 ];
 
 @NgModule({

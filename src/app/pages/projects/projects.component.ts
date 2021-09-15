@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IProject } from 'src/app/interfaces/interfaces';
+import { Location } from '@angular/common';
+
+import { IProject } from '../../interfaces/interfaces';
 import { ProjectService } from '../../service/project.service';
 
 @Component({
@@ -10,16 +12,22 @@ import { ProjectService } from '../../service/project.service';
 export class ProjectsComponent implements OnInit {
   public projects: IProject[] = [];
 
-  constructor(private _projectService: ProjectService) {}
+  constructor(
+    private _projectService: ProjectService,
+    private _location: Location
+  ) {}
 
   ngOnInit(): void {
-    this._getProjects();
+    this.getProjects();
   }
 
-  private _getProjects() {
+  public getProjects() {
     this._projectService.loadProjects().subscribe((res) => {
       this.projects = res.data;
-      console.log(this.projects);
     });
+  }
+
+  public back(): void {
+    this._location.back();
   }
 }

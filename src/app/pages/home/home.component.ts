@@ -8,9 +8,5 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   constructor() {}
 
-  download() {
-    window.open('../../../assets/document/cv_keneth.pdf', 'Download');
-  }
-
   ngOnInit(): void {}
 }

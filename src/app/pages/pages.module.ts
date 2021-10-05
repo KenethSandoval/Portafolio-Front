@@ -10,16 +10,18 @@ import { PagesComponent } from './pages.component';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MainComponent } from '../shared/main/main.component';
 
 @NgModule({
   declarations: [
-    PagesComponent,
     HomeComponent,
+    MainComponent,
     HeaderComponent,
     SidebarComponent,
     AboutComponent,
     ContactComponent,
     ProjectsComponent,
+    PagesComponent,
   ],
   exports: [PagesComponent],
   imports: [CommonModule, RouterModule, HttpClientModule],

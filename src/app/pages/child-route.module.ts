@@ -6,7 +6,11 @@ import { ProjectsComponent } from './projects/projects.component';
 
 const childRoute: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home' } },
-  { path: 'projects', component: ProjectsComponent, data: { title: 'Home' } },
+  {
+    path: 'projects',
+    component: ProjectsComponent,
+    data: { title: 'Projects' },
+  },
 ];
 
 @NgModule({

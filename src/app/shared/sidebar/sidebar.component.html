@@ -1,5 +1,8 @@
 <!--------------------------SIDEBAR----------------------->
-<div class="h-full p-6 border-r md:block w-64 border-gray-200">
+<div
+  class="h-full p-6 border-r w-64 border-gray-200"
+  [ngClass]="this.menuService.isOpen ? 'hidden' : 'md:block'"
+>
   <h6 class="font-bold mb-6 dark:text-white">Acciones Rapidas</h6>
   <ul>
     <li class="flex mb-8">

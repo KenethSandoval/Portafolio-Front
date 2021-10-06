@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuService } from '../../service/menu/menu.service';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +7,11 @@ import { Component } from '@angular/core';
   styles: [],
 })
 export class HeaderComponent {
-  constructor() {}
+  constructor(private menuService: MenuService) {}
 
   isOpen: boolean = true;
 
   menu() {
-    this.isOpen = !this.isOpen;
+    this.isOpen = this.menuService.isOpenMenu();
   }
 }

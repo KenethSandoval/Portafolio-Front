@@ -6,7 +6,10 @@
     >
       <div class="flex items-center flex-grow flex-shrink-0 lg:mb-4">
         <div class="flex items-center justify-between w-full md:w-auto">
-          <div class="cursor-pointer text-lg text-white">
+          <div
+            class="cursor-pointer text-lg text-white"
+            *ngIf="router.url === '/projects'; else responsiveMenu"
+          >
             <i class="fas fa-bars cursor-pointer" (click)="menu()"></i>
           </div>
 
@@ -16,45 +19,48 @@
               src="../../../assets/img/logo.png"
             />
           </a>
-          <div class="-mr-2 mb-2 flex items-center md:hidden">
-            <button
-              type="button"
-              class="
-                bg-dark
-                rounded-md
-                p-2
-                inline-flex
-                items-center
-                justify-center
-                text-gray-400
-                hover:text-gray-500 hover:bg-gray-100
-                focus:outline-none
-                focus:ring-2
-                focus:ring-inset
-                focus:ring-indigo-500
-              "
-              aria-expanded="false"
-              (click)="menu()"
-            >
-              <span class="sr-only">Open main menu</span>
 
-              <svg
-                class="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
+          <ng-template #responsiveMenu>
+            <div class="-mr-2 mb-2 flex items-center md:hidden">
+              <button
+                type="button"
+                class="
+                  bg-dark
+                  rounded-md
+                  p-2
+                  inline-flex
+                  items-center
+                  justify-center
+                  text-gray-400
+                  hover:text-gray-500 hover:bg-gray-100
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-inset
+                  focus:ring-indigo-500
+                "
+                aria-expanded="false"
+                (click)="menuHeader()"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+                <span class="sr-only">Open main menu</span>
+
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </ng-template>
         </div>
       </div>
 
@@ -108,7 +114,7 @@
       origin-top-right
       md:hidden
     "
-    [ngClass]="isOpen ? 'hidden' : ''"
+    [ngClass]="isOpenHeader ? 'hidden' : ''"
   >
     <div
       class="
@@ -140,7 +146,7 @@
               focus:ring-inset
               focus:ring-indigo-500
             "
-            (click)="menu()"
+            (click)="menuHeader()"
           >
             <span class="sr-only">Close main menu</span>
             <svg

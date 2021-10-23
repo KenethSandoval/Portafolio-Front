@@ -1,4 +1,4 @@
-<div class="flex h-screen">
+<div class="flex h-screen overflow-auto">
   <app-sidebar></app-sidebar>
   <div class="p-6 w-full">
     <div class="flex items-center justify-between">
@@ -61,7 +61,13 @@
       >
         <div class="md:flex-shrink-0">
           <img
-            class="h-48 w-full object-cover md:h-full md:w-48"
+            class="
+              h-48
+              w-full
+              object-cover
+              md:h-48 md:w-full md:blur-sm md:hover:blur-none
+              animate__animated animate__bounce
+            "
             [src]="project._imageUrl"
             alt="image project"
           />

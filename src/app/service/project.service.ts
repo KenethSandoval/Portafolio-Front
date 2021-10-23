@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
 import { IProjectResponse } from '../interfaces/interfaces';
+import { Project } from '../models/projects.model';
 
 const base_url = environment.base_url;
 
@@ -16,10 +17,22 @@ export class ProjectService {
   public loadProjects() {
     const url = `${base_url}/project`;
     return this._http.get<IProjectResponse>(url).pipe(
-      map(({ data, messageStatus }) => {
+      map((resp) => {
+        const projects = resp.data.map(
+          (project) =>
+            new Project(
+              project._id,
+              project.title,
+              project.description,
+              project.urlGithub,
+              project.tags,
+              project.urlDemo,
+              project.image
+            )
+        );
+
         return {
-          data,
-          messageStatus,
+          projects,
         };
       })
     );

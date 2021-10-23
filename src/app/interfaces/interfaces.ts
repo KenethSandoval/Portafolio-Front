@@ -1,15 +1,7 @@
-export interface IProject {
-  _id: string;
-  title: string;
-  description: string;
-  urlGithub: string;
-  tags: Array<string>;
-  urlDemo?: string;
-  image?: string;
-}
+import { Project } from '../models/projects.model';
 
 export interface IProjectResponse {
   messageStatus: string;
-  data: Array<IProject>;
+  data: Array<Project>;
   status: number;
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
-import { IProject } from '../../interfaces/interfaces';
 import { ProjectService } from '../../service/project.service';
+import { Project } from '../../models/projects.model';
 
 @Component({
   selector: 'app-projects',
@@ -10,7 +10,7 @@ import { ProjectService } from '../../service/project.service';
   styles: [],
 })
 export class ProjectsComponent implements OnInit {
-  public projects: IProject[] = [];
+  public projects: Project[] = [];
 
   constructor(
     private _projectService: ProjectService,
@@ -22,8 +22,8 @@ export class ProjectsComponent implements OnInit {
   }
 
   public getProjects() {
-    this._projectService.loadProjects().subscribe((res) => {
-      this.projects = res.data;
+    this._projectService.loadProjects().subscribe(({ projects }) => {
+      this.projects = projects;
     });
   }
 

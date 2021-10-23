@@ -9,7 +9,13 @@ import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 
 @NgModule({
-  declarations: [HeaderComponent, SidebarComponent, AboutComponent, ContactComponent, MainComponent],
+  declarations: [
+    HeaderComponent,
+    SidebarComponent,
+    AboutComponent,
+    ContactComponent,
+    MainComponent,
+  ],
   exports: [],
   imports: [CommonModule, RouterModule],
 })

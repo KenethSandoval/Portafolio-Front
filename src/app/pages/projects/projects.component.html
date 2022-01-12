@@ -22,7 +22,7 @@
         Back
       </button>
 
-      <button
+      <!-- TODO: descomentar <button
         class="
           hover:bg-blue-100
           group
@@ -51,7 +51,7 @@
           />
         </svg>
         New
-      </button>
+      </button> -->
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -65,7 +65,7 @@
               h-48
               w-full
               object-cover
-              md:h-48 md:w-full md:blur-sm md:hover:blur-none
+              md:h-48 md:w-full lg:blur-sm md:hover:blur-none
               animate__animated animate__bounce
             "
             [src]="project._imageUrl"
@@ -106,9 +106,11 @@
               lg:inline-flex
               hover:cursor-pointer
             "
-          >
-            <i class="fab fa-github mr-1"></i>Github</span
-          >
+            >
+	    <a [href]="project.urlGithub">
+               <i class="fab fa-github mr-1 mt-1"></i>Github
+	    </a>
+	  </span>
           <span
             class="
               inline-block
@@ -124,8 +126,11 @@
               lg:inline-flex
               hover:cursor-pointer
             "
-            ><i class="fas fa-globe mr-1"></i>Web</span
-          >
+            >
+	    <a [href]="project.urlDemo">
+	      <i class="fas fa-globe mr-1 mt-1"></i>Web
+	    </a>
+	  </span>
         </div>
       </div>
     </div>

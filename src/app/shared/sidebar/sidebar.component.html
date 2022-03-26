@@ -1,49 +1,22 @@
 <!--------------------------SIDEBAR----------------------->
-<div
-  class="h-full p-6 border-r w-64 border-gray-200"
-  [ngClass]="this.menuService.isOpen ? 'hidden' : 'md:block'"
->
-  <h6 class="font-bold mb-6 dark:text-white">Acciones Rapidas</h6>
-  <ul>
-    <li class="flex mb-8">
-      <div
-        class="
-          bg-white
-          shadow-sm
-          p-2
-          mr-3
-          rounded-lg
-          dark:bg-gray-700 dark:text-white
-        "
-      >
-        <i class="fab fa-github"></i>
-      </div>
-      <span class="self-center">Inicio</span>
-    </li>
-
-    <li class="flex mb-8">
-      <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">
-        <i class="fab fa-github"></i>
-      </div>
-      <span class="self-center">Inicio</span>
-    </li>
-  </ul>
-
-  <h6 class="font-bold mb-4">Configuraciones</h6>
-  <ul>
-    <li class="flex mb-8">
-      <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">
-        <i class="fab fa-github"></i>
-      </div>
-      <span class="self-center">Inicio</span>
-    </li>
-
-    <li class="flex mb-8">
-      <div class="bg-white shadow-sm p-2 mr-3 rounded-lg">
-        <i class="fab fa-github"></i>
-      </div>
-      <span class="self-center">Inicio</span>
-    </li>
-  </ul>
-</div>
+<aside class="lg:w-64 lg:block w-0 hidden"
+	[ngClass]="!this.menuService.isOpen ? 'lg:w-0' : 'w-64'">
+		<div
+  		class="px-3 py-4 overflow-y-scroll rounded bg-gray-50 dark:bg-gray-800"
+  		[ngClass]="!this.menuService.isOpen ? 'hidden' : 'md:block'"
+		>
+  		<h6 class="font-bold mb-6 dark:text-white">Categories</h6>
+  		<ul class="space-y-2">
+					<li>
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+						<i class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-2xl">
+							 <i class="nf nf-custom-vim"></i>
+						</i>
+						<span class="ml-3">Dashboard</span>
+					</a>
+				</li>					
+  		</ul>
+ 		</div>
+</aside>
 <!-----------------------END SIDEBAR----------------------->

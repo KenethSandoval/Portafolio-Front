@@ -1,21 +1,23 @@
 <!--------------------------SIDEBAR----------------------->
-<aside class="lg:w-64 lg:block w-0 hidden"
-	[ngClass]="!this.menuService.isOpen ? 'lg:w-0' : 'w-64'">
+<aside class="lg:w-64 lg:block"
+	[ngClass]="this.menuService.isOpen ? 'md:hidden md:w-0 hidden w-0' : 'lg:hidden md:block md:w-64 block w-64'">
 		<div
   		class="px-3 py-4 overflow-y-scroll rounded bg-gray-50 dark:bg-gray-800"
-  		[ngClass]="!this.menuService.isOpen ? 'hidden' : 'md:block'"
 		>
-  		<h6 class="font-bold mb-6 dark:text-white">Categories</h6>
+  		<h6 class="font-bold mb-6 dark:text-white">
+					<i class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-2xl fa-solid fa-box-archive">
+					</i>
+					<span class="ml-3">Categories</span>
+			</h6>
   		<ul class="space-y-2">
 					<li>
 					<a href="#"
 						class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-						<i class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-2xl">
-							 <i class="nf nf-custom-vim"></i>
+						<i class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-2xl fa-solid fa-microchip">
 						</i>
-						<span class="ml-3">Dashboard</span>
+						<span class="ml-3">C/C++</span>
 					</a>
-				</li>					
+				</li>
   		</ul>
  		</div>
 </aside>

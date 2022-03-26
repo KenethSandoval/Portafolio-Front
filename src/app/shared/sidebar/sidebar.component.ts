@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { MenuService } from 'src/app/service/menu/menu.service';
 
+interface ISidebar {
+	item:string,
+	icon: string
+}
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -8,4 +13,22 @@ import { MenuService } from 'src/app/service/menu/menu.service';
 })
 export class SidebarComponent {
   constructor(public menuService: MenuService) {}
+	menuSidebar: Array<ISidebar> = [
+		{
+			item: "C/C++",
+			icon: "fa-solid fa-microchip"
+		},
+		{
+			item: "Javascript/Typescript",
+			icon: "fa-brands fa-node-js"
+		},
+		{
+			item: "Golang",
+			icon: "fa-brands fa-golang"
+		},
+		{
+			item: "Linux config and more",
+			"icon": "fa-brands fa-linux"
+		}
+	]
 }

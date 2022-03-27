@@ -5,7 +5,7 @@
         <div class="flex items-center w-full md:w-auto">
           <div
             class="cursor-pointer text-lg text-white"
-            *ngIf="router.url === '/projects'; else responsiveMenu"
+            *ngIf="router.url !== '/'; else responsiveMenu"
           >
             <i class="fas fa-bars cursor-pointer" (click)="menu()"></i>
           </div>
@@ -45,7 +45,6 @@
 
       <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8 lg:mb-4">
         <a
-          href="#"
           class="
             font-medium
             text-gray-500
@@ -53,12 +52,25 @@
             dark:text-white
             cursor-pointer
           "
+					[ngClass]="router.url === '/' ? '': 'hidden'"
           routerLink="projects">
-	  <i class="fas fa-project-diagram fa-sm mr-2"></i> Projects
-	</a>
+	  			<i class="fas fa-project-diagram fa-sm mr-2"></i> Projects
+				</a>
 
         <a
-	  href="https://github.com/KenethSandoval"
+	  			href="https://github.com/KenethSandoval"
+          class="
+            font-medium
+            text-gray-500
+            hover:text-gray-900
+            dark:text-white
+            cursor-pointer
+          ">
+					<i class="fab fa-github"></i>
+				</a>
+
+        <a
+	  			href="https://www.linkedin.com/in/keneth-sandoval"
           class="
             font-medium
             text-gray-500
@@ -66,20 +78,9 @@
             dark:text-white
             cursor-pointer
           "
-          ><i class="fab fa-github"></i
-        ></a>
+          ><i class="fab fa-linkedin-in"></i>
 
-        <a
-	  href="https://www.linkedin.com/in/keneth-sandoval"
-          class="
-            font-medium
-            text-gray-500
-            hover:text-gray-900
-            dark:text-white
-            cursor-pointer
-          "
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
+				</a>
       </div>
     </nav>
   </div>

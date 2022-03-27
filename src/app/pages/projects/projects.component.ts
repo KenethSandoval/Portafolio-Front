@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +6,5 @@ import { Location } from '@angular/common';
   styles: [],
 })
 export class ProjectsComponent {
-  constructor(private _location: Location) {}
-
-  public back(): void {
-    this._location.back();
-  }
+  constructor() {}
 }

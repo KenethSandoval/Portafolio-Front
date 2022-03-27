@@ -1,5 +1,31 @@
 <div class="bg-white dark:bg-gray-800">
   <app-header></app-header>
 
-  <router-outlet></router-outlet>
+<div class="flex h-screen overflow-auto">
+	<app-sidebar></app-sidebar>
+  <div class="p-6 w-full">
+    <div class="flex items-center justify-between">
+      <button
+        class="
+          hover:bg-blue-100
+          flex
+          items-center
+          rounded-md
+          bg-light-blue-100
+          text-light-blue-600 text-sm
+          font-medium
+          px-4
+          py-2
+          mb-4
+          dark:text-white dark:hover:bg-indigo-700
+        "
+      >
+        <i class="fas fa-arrow-left mr-2"></i>
+        Back
+      </button>
+    </div>
+		<router-outlet></router-outlet>
+  </div>
+</div>
+
 </div>

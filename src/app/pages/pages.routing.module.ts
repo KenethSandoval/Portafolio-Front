@@ -5,10 +5,11 @@ import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'projects',
     component: PagesComponent,
     loadChildren: () =>
       import('./child-route.module').then((m) => m.ChildRouteModule),
+    data: { title: 'Projects' },
   },
 ];
 

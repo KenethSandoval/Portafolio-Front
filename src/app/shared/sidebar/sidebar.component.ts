@@ -3,7 +3,8 @@ import { MenuService } from 'src/app/service/menu/menu.service';
 
 interface ISidebar {
 	item:string,
-	icon: string
+	icon: string,
+	page: string
 }
 
 @Component({
@@ -16,19 +17,23 @@ export class SidebarComponent {
 	menuSidebar: Array<ISidebar> = [
 		{
 			item: "C/C++",
-			icon: "fa-solid fa-microchip"
+			icon: "fa-solid fa-microchip",
+			"page": ""
 		},
 		{
 			item: "Javascript/Typescript",
-			icon: "fa-brands fa-node-js"
+			icon: "fa-brands fa-node-js",
+			"page": "jtxs"
 		},
 		{
 			item: "Golang",
-			icon: "fa-brands fa-golang"
+			icon: "fa-brands fa-golang",
+			"page": ""
 		},
 		{
 			item: "Linux config and more",
-			"icon": "fa-brands fa-linux"
+			"icon": "fa-brands fa-linux",
+			"page": ""
 		}
 	]
 }

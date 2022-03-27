@@ -11,6 +11,7 @@ import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from '../shared/main/main.component';
+import { JtxsComponent } from './projects/jtxs/jtxs.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MainComponent } from '../shared/main/main.component';
     ContactComponent,
     ProjectsComponent,
     PagesComponent,
+    JtxsComponent,
   ],
   exports: [PagesComponent],
   imports: [CommonModule, RouterModule, HttpClientModule],

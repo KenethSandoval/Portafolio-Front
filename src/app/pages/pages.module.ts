@@ -12,6 +12,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from '../shared/main/main.component';
 import { JtxsComponent } from './projects/jtxs/jtxs.component';
+import { DevosComponent } from './projects/devos/devos.component';
+import { LinuxComponent } from './projects/linux/linux.component';
+import { GolangComponent } from './projects/golang/golang.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { JtxsComponent } from './projects/jtxs/jtxs.component';
     ProjectsComponent,
     PagesComponent,
     JtxsComponent,
+    DevosComponent,
+    LinuxComponent,
+    GolangComponent,
   ],
   exports: [PagesComponent],
   imports: [CommonModule, RouterModule, HttpClientModule],

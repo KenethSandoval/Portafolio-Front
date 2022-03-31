@@ -11,9 +11,11 @@
               object-cover
               md:h-48 md:w-full lg:blur-sm md:hover:blur-none
               animate__animated animate__bounce
+							cursor-cards
             "
             [src]="project._imageUrl"
             alt="image project"
+						(click)="openImage(project._imageUrl)"
           />
         </div>
 

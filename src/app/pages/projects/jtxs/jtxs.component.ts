@@ -24,4 +24,8 @@ export class JtxsComponent implements OnInit {
       this.projects = projects.filter(c => c.tags.includes("typescript"));
     });
   }
+
+	public openImage(image:string) {
+		console.log(image);
+	}
 }

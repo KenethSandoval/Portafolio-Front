@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
+import { ModalComponent } from '../components/modal/modal.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
       import('./child-route.module').then((m) => m.ChildRouteModule),
     data: { title: 'Projects' },
   },
+	{
+		path: 'testmodal',
+		component: ModalComponent
+	}
 ];
 
 @NgModule({

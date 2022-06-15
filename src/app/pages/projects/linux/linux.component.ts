@@ -1,16 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-linux',
-  templateUrl: './linux.component.html',
-  styles: [
-  ]
+  selector: "app-linux",
+  templateUrl: "./linux.component.html",
+  styles: []
 })
 export class LinuxComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

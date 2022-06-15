@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
 
-import { HeaderComponent } from './header/header.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { MainComponent } from './main/main.component';
+import { HeaderComponent } from "./header/header.component";
+import { SidebarComponent } from "./sidebar/sidebar.component";
+import { AboutComponent } from "./about/about.component";
+import { ContactComponent } from "./contact/contact.component";
+import { MainComponent } from "./main/main.component";
 
 @NgModule({
   declarations: [
@@ -14,9 +14,9 @@ import { MainComponent } from './main/main.component';
     SidebarComponent,
     AboutComponent,
     ContactComponent,
-    MainComponent,
+    MainComponent
   ],
   exports: [],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule]
 })
 export class SharedModule {}

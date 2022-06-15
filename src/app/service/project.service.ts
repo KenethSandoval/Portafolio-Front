@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { map } from "rxjs/operators";
 
-import { environment } from '../../environments/environment';
-import { IProjectResponse } from '../interfaces/interfaces';
-import { Project } from '../models/projects.model';
+import { environment } from "../../environments/environment";
+import { IProjectResponse } from "../interfaces/interfaces";
+import { Project } from "../models/projects.model";
 
 const base_url = environment.base_url;
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root"
 })
 export class ProjectService {
   constructor(private _http: HttpClient) {}
@@ -17,9 +17,9 @@ export class ProjectService {
   public loadProjects() {
     const url = `${base_url}/project`;
     return this._http.get<IProjectResponse>(url).pipe(
-      map((resp) => {
+      map(resp => {
         const projects = resp.data.map(
-          (project) =>
+          project =>
             new Project(
               project._id,
               project.title,
@@ -32,7 +32,7 @@ export class ProjectService {
         );
 
         return {
-          projects,
+          projects
         };
       })
     );

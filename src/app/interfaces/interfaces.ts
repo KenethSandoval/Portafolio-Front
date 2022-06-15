@@ -1,4 +1,4 @@
-import { Project } from '../models/projects.model';
+import { Project } from "../models/projects.model";
 
 export interface IProjectResponse {
   messageStatus: string;

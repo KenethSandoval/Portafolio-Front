@@ -10,10 +10,7 @@
             <i class="fas fa-bars cursor-pointer" (click)="menu()"></i>
           </div>
 
-            <img
-              class="h-8 w-auto sm:h-12 ml-8"
-              src="../../../assets/img/logo.png"
-            />
+          <img class="h-8 w-auto sm:h-12 ml-8" src="../../../assets/img/logo.png" />
 
           <ng-template #responsiveMenu>
             <div class="-mr-2 mb-2 flex items-center md:hidden">
@@ -28,10 +25,7 @@
                   text-gray-400
                   hover:text-gray-500 hover:bg-gray-100
                   dark:hover:text-dark dark:hover:bg-gray-700
-                  focus:outline-none
-                  focus:ring-2
-                  focus:ring-inset
-                  focus:ring-indigo-500
+                  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500
                   fas
                   fa-bars
                   cursor-pointer
@@ -52,25 +46,27 @@
             dark:text-white
             cursor-pointer
           "
-					[ngClass]="router.url === '/' ? '': 'hidden'"
-          routerLink="projects">
-	  			<i class="fas fa-project-diagram fa-sm mr-2"></i> Projects
-				</a>
+          [ngClass]="router.url === '/' ? '' : 'hidden'"
+          routerLink="projects"
+        >
+          <i class="fas fa-project-diagram fa-sm mr-2"></i> Projects
+        </a>
 
         <a
-	  			href="https://github.com/KenethSandoval"
+          href="https://github.com/KenethSandoval"
           class="
             font-medium
             text-gray-500
             hover:text-gray-900
             dark:text-white
             cursor-pointer
-          ">
-					<i class="fab fa-github"></i>
-				</a>
+          "
+        >
+          <i class="fab fa-github"></i>
+        </a>
 
         <a
-	  			href="https://www.linkedin.com/in/keneth-sandoval"
+          href="https://www.linkedin.com/in/keneth-sandoval"
           class="
             font-medium
             text-gray-500
@@ -79,23 +75,13 @@
             cursor-pointer
           "
           ><i class="fab fa-linkedin-in"></i>
-
-				</a>
+        </a>
       </div>
     </nav>
   </div>
 
   <div
-    class="
-      absolute
-      top-0
-      inset-x-0
-      p-2
-      transition
-      transform
-      origin-top-right
-      md:hidden
-    "
+    class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
     [ngClass]="isOpenHeader ? 'hidden' : ''"
   >
     <div
@@ -123,10 +109,7 @@
               text-gray-400
               hover:text-gray-500 hover:bg-gray-100
               dark:hover:text-dark dark:hover:bg-gray-700
-              focus:outline-none
-              focus:ring-2
-              focus:ring-inset
-              focus:ring-indigo-500
+              focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500
               fas
               fa-times
               cursor-pointer
@@ -149,11 +132,11 @@
             hover:text-gray-900 hover:bg-gray-50
             dark:hover:text-white dark:hover:bg-gray-500 dark:text-white
           "
-          >
-	  <i class="fas fa-project-diagram fa-sm mr-2"></i> Projects
-	</a>
+        >
+          <i class="fas fa-project-diagram fa-sm mr-2"></i> Projects
+        </a>
         <a
-	  href="https://github.com/KenethSandoval"
+          href="https://github.com/KenethSandoval"
           class="
             block
             px-3
@@ -169,7 +152,7 @@
         >
 
         <a
-	  href="https://www.linkedin.com/in/keneth-sandoval"
+          href="https://www.linkedin.com/in/keneth-sandoval"
           class="
             block
             px-3

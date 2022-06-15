@@ -1,31 +1,43 @@
-import { Component, OnInit } from '@angular/core';
-import { Project } from '../../../models/projects.model';
-import { ProjectService } from '../../../service/project.service';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
+import { delay } from "rxjs/operators";
+import { ModalService } from "src/app/services/modal.service";
+import { Project } from "../../../models/projects.model";
+import { ProjectService } from "../../../service/project.service";
 
 @Component({
-  selector: 'app-jtxs',
-  templateUrl: './jtxs.component.html',
-  styles: [
-  ]
+  selector: "app-jtxs",
+  templateUrl: "./jtxs.component.html",
+  styles: []
 })
-export class JtxsComponent implements OnInit {
-	public projects: Project[] = [];
+export class JtxsComponent implements OnInit, OnDestroy {
+  public projects: Project[] = [];
+  public imgSubs!: Subscription;
 
   constructor(
     private _projectService: ProjectService,
+    private _modalService: ModalService
   ) {}
+
+  ngOnDestroy() {
+    this.imgSubs.unsubscribe();
+  }
 
   ngOnInit(): void {
     this.getProjects();
+    this.imgSubs = this._modalService.newImg
+      .pipe(delay(100))
+      .subscribe(() => this.getProjects());
   }
 
   public getProjects() {
     this._projectService.loadProjects().subscribe(({ projects }) => {
+      console.log(projects);
       this.projects = projects.filter(c => c.tags.includes("typescript"));
     });
   }
 
-	public openImage(image:string) {
-		console.log(image);
-	}
+  public openImage(image: string) {
+    this._modalService.openModal(image);
+  }
 }

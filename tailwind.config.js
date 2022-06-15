@@ -4,15 +4,15 @@ module.exports = {
   prefix: "",
   purge: {
     enabled: guessProductionMode(),
-    content: ["./src/**/*.{html,ts}"],
+    content: ["./src/**/*.{html,ts}"]
   },
   darkMode: "class", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {}
   },
   variants: {
-    extend: {},
+    extend: {}
   },
   plugins: [],
-  mode: "jit",
+  mode: "jit"
 };

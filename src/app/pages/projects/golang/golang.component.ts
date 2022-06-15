@@ -1,16 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-golang',
-  templateUrl: './golang.component.html',
-  styles: [
-  ]
+  selector: "app-golang",
+  templateUrl: "./golang.component.html",
+  styles: []
 })
 export class GolangComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

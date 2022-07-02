@@ -32,12 +32,7 @@ export class JtxsComponent implements OnInit, OnDestroy {
 
   public getProjects() {
     this._projectService.loadProjects().subscribe(({ projects }) => {
-      console.log(projects);
-      this.projects = projects.filter(c => c.tags.includes("typescript"));
+      this.projects = projects.filter(c => c.tags.includes("js"));
     });
-  }
-
-  public openImage(image: string) {
-    this._modalService.openModal(image);
   }
 }
